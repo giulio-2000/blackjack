@@ -6,7 +6,7 @@
 # TODO:
 # - make this class iterable
 
-from cards import Card
+from card import Card
 
 
 class Deck( object ):
