@@ -82,7 +82,8 @@ class Deck( object ):
         if( self.__cards ):
             del self.__cards[0:numToRemove]
 
-            
+
+
 if( __name__ == "__main__" ):
     print("It is not allowed to run this module directly! Pls import it!")
     input("\n\nPress the enter key to exit.")

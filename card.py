@@ -1,4 +1,4 @@
-# Class to represent a French Cards
+# Class to represent a French Card
 
 # Has two properties: Rank and Suit
 # By default, it displays like, e.g., 8H, 
@@ -27,14 +27,6 @@ class Card( object ):
         self.__suit       = suit
         self.__isFaceDown = isFaceDown
     
-    @property
-    def Rank( self ):
-        return self.__rank
-    
-    @property
-    def Suit( self ):
-        return self.__suit
-    
     def __str__( self ):
         rep = ""
         if( self.__isFaceDown ):
@@ -43,16 +35,27 @@ class Card( object ):
             rep = self.__rank + self.__suit
         return rep
     
+    @property
+    def Rank( self ):
+        return self.__rank
+    
+    @property
+    def Suit( self ):
+        return self.__suit
+
+    # If is faceDown, turn it face up and vice-versa
     def Flip( self ):
         self.__isFaceDown = not self.__isFaceDown
-        
+    
+    # Turns the card face up
     def TurnFaceUp( self ):
         self.__isFaceDown = False
-        
+    
+    # Turns the card face down
     def TurnFaceDown( self ):
         self.__isFaceDown = True
 
-        
+
 
 if( __name__ == "__main__" ):
     print("It is not allowed to run this module directly! Pls import it!")
