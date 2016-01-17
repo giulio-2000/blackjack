@@ -1,7 +1,11 @@
 # Class to represent a deck of French Cards
 
-# This deck might be empty or populated with an arbitrary amount of cards
-# Note: Cards might be repeated!
+# This deck might be empty or populated with an arbitrary amount of cards.
+# Repetition is allowed and order matters.
+
+# IMPORTANT NOTE: As said, cards might be repeated! 
+# This is possibly contrary to most definitions of "deck", but for now we keep it like this.
+
 
 # TODO:
 # - make this class iterable
