@@ -3,6 +3,8 @@
 from card import Card
 from deck import Deck
 
+import random
+random.seed(1)
 
 d = Deck()
 

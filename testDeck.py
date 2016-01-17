@@ -2,6 +2,8 @@
 
 from deck import Deck
 
+import random
+random.seed(1)
 
 print( "Empty Deck" )
 d = Deck()

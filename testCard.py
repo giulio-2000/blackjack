@@ -2,6 +2,8 @@
 
 from card import Card
 
+import random
+random.seed(1)
 
 c = Card( "2", "C" )
 
