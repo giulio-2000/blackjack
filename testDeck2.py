@@ -10,47 +10,47 @@ d = Deck()
 
 c = Card( "3", "S" )
 
-d.AddToTop( c )
-d.AddToTop( Card( "3", "S" ) )
+d.addToTop( c )
+d.addToTop( Card( "3", "S" ) )
 
 print( "The deck is now:" )
 print( d )
 print( "\n" )
 
 print( "Add AH card to bottom:" )
-d.AddToBottom( Card( "A", "H" ) )
+d.addToBottom( Card( "A", "H" ) )
 print( d )
 print( "\n" )
 
 print( "Shuffle the deck:" )
-d.Shuffle()
+d.shuffle()
 print( d )
 
 d2 = Deck()
-d2.AddToTop( Card( "2", "C" ) )
-d2.AddToTop( Card( "3", "C" ) )
-d2.AddToTop( Card( "4", "C" ) )
-d2.AddToTop( Card( "5", "C" ) )
-d2.AddToTop( Card( "6", "C" ) )
+d2.addToTop( Card( "2", "C" ) )
+d2.addToTop( Card( "3", "C" ) )
+d2.addToTop( Card( "4", "C" ) )
+d2.addToTop( Card( "5", "C" ) )
+d2.addToTop( Card( "6", "C" ) )
 
 print( "Add clubs mini deck to bottom:" )
-d.AddToBottom( d2 )
+d.addToBottom( d2 )
 print( d )
 print( "\n" )
 
 print( "Add clubs mini deck to top:" )
-d.AddToTop( d2 )
+d.addToTop( d2 )
 print( d )
 print( "\n" )
 
 print( "Remove one card from top:" )
-d.RemoveFromTop( )
+d.removeFromTop( )
 print( d )
 print( "\n" )
 
 
 print( "Remove five more cards from top:" )
-d.RemoveFromTop( 5 )
+d.removeFromTop( 5 )
 print( d )
 print( "\n" )
 

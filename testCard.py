@@ -9,19 +9,19 @@ c = Card( "2", "C" )
 
 print( c )
 
-c.TurnFaceDown()
-c.TurnFaceDown()
+c.turnFaceDown()
+c.turnFaceDown()
 
 print( c )
 
-c.TurnFaceUp()
+c.turnFaceUp()
 
 print( c )
 
-c.Flip()
+c.flip()
 
 print( c )
 
-print( c.Rank )
-print( c.Suit )
+print( c.rank )
+print( c.suit )
 

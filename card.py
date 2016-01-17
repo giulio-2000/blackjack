@@ -36,23 +36,23 @@ class Card( object ):
         return rep
     
     @property
-    def Rank( self ):
+    def rank( self ):
         return self.__rank
     
     @property
-    def Suit( self ):
+    def suit( self ):
         return self.__suit
 
     # If is faceDown, turn it face up and vice-versa
-    def Flip( self ):
+    def flip( self ):
         self.__isFaceDown = not self.__isFaceDown
     
     # Turns the card face up
-    def TurnFaceUp( self ):
+    def turnFaceUp( self ):
         self.__isFaceDown = False
     
     # Turns the card face down
-    def TurnFaceDown( self ):
+    def turnFaceDown( self ):
         self.__isFaceDown = True
 
 

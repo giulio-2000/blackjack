@@ -11,19 +11,19 @@ print( d )
 print( "\n" )
 
 print( "Populate the deck with 52 cards" )
-d.Populate()
+d.populate()
 print( d )
 print( "\n" )
 
 print( "Populate the deck with 104 cards" )
-d.Populate( 2 )
+d.populate( 2 )
 print( d )
 print( "\n" )
 
-if( d.IsEmpty() ):
+if( d.isEmpty() ):
     print( "d is empty" )
 else:
     print( "d is not empty" )
 print( "\n" ) 
 
-print( d.GetCardFromTop() )
+print( d.getCardFromTop() )

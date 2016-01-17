@@ -16,7 +16,7 @@ class Deck( object ):
     
     def __str__( self ):
         rep = ""
-        if( self.IsEmpty() ):
+        if( self.isEmpty() ):
             rep = "<emptyDeck>"
         else:
             for c in self.__cards:
@@ -25,8 +25,8 @@ class Deck( object ):
     
     # Clears and populates with [numStdDecks] std Freach card decks
     # Does not shuffle
-    def Populate( self, numStdDecks = 1 ):
-        self.Clear()
+    def populate( self, numStdDecks = 1 ):
+        self.clear()
         for n in range( numStdDecks ):
             for s in Card.SUITS:
                 for r in Card.RANKS:
@@ -34,28 +34,28 @@ class Deck( object ):
                     self.__cards.append( c )
     
     # Checks if the deck is empty
-    def IsEmpty( self ):
+    def isEmpty( self ):
         return ( not self.__cards )
     
     # Clears the deck
-    def Clear( self ):
+    def clear( self ):
         self.__cards = []
     
     # Shuffles the deck    
-    def Shuffle( self ):
+    def shuffle( self ):
         from random import shuffle
         shuffle( self.__cards )
     
     # Get the card from the top (but does not remove it from the deck)
     # If the deck is empty, throws an error 
     # TODO: maybe avoid error in the latter case and return a "default" theCard
-    def GetCardFromTop( self ):
-        if( self.IsEmpty() ):
+    def getCardFromTop( self ):
+        if( self.isEmpty() ):
             raise Exception( "Cannot GetCardFromTop if the deck is empty" )
         return self.__cards[0]
     
     # Adds a card/deck to the top
-    def AddToTop( self, toBeAdded ):
+    def addToTop( self, toBeAdded ):
         if( type( toBeAdded ) == Card ):
             self.__cards.insert( 0, toBeAdded )
         elif( type( toBeAdded ) == Deck ):
@@ -65,7 +65,7 @@ class Deck( object ):
             raise Exception( "AddToTop only takes cards or decks" )
             
     # Adds a card/deck to the bottom
-    def AddToBottom( self, toBeAdded ):
+    def addToBottom( self, toBeAdded ):
         if( type( toBeAdded ) == Card ):
             self.__cards.append( toBeAdded )
         elif( type( toBeAdded ) == Deck ):
@@ -76,7 +76,7 @@ class Deck( object ):
     
     # Removes [numToRemove] cards from the top of the deck
     # If [numToRemove] is >= than size of the deck, this is equivalent to clearing the deck
-    def RemoveFromTop( self, numToRemove = 1 ):
+    def removeFromTop( self, numToRemove = 1 ):
         if( numToRemove < 0 ):
             raise Exception( "RemoveFromTop: numToRemove cannot be negative " )
         if( self.__cards ):
