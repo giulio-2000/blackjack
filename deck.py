@@ -23,7 +23,7 @@ class Deck( object ):
                 rep += c.__str__() + "\n"
         return rep
     
-    # Clears and populate with [numStdDecks] std Freach card decks
+    # Clears and populates with [numStdDecks] std Freach card decks
     # Does not shuffle
     def Populate( self, numStdDecks = 1 ):
         self.Clear()
@@ -50,7 +50,7 @@ class Deck( object ):
     # If the deck is empty, throws an error 
     # TODO: maybe avoid error in the latter case and return a "default" theCard
     def GetCardFromTop( self ):
-        if( self.IsEmpty ):
+        if( self.IsEmpty() ):
             raise Exception( "Cannot GetCardFromTop if the deck is empty" )
         return self.__cards[0]
     
